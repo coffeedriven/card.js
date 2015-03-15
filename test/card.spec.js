@@ -26,7 +26,7 @@ it('should detect card type', function() {
   expect(card('6370000000000000').getType()).toBe('instapayment');
   expect(card('5019000000000000').getType()).toBe('dankort');
 
-  expect(card('9999000000000000').getType()).toBeUndefined;
+  expect(card('9999000000000000').getType()).toBeUndefined();
 });
 
 it('detect card type based on few numbers', function() {
@@ -44,7 +44,7 @@ it('detect card type based on few numbers', function() {
   expect(card('637').getIINType()).toBe('instapayment');
   expect(card('5019').getIINType()).toBe('dankort');
 
-  expect(card('9999').getIINType()).toBeUndefined;
+  expect(card('9999').getIINType()).toBeUndefined();
 });
 
 describe('card type validation', function() {
