@@ -1,5 +1,5 @@
 {
-  "name": "cardjs",
+  "name": "card.js",
   "version": "0.0.1",
   "description": "parse and validate credit card number in javascript",
   "homepage": "https://github.com/coffeedriven/cardjs",

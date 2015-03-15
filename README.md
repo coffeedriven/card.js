@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/coffeedriven/card.js.png)](https://travis-ci.org/coffeedriven/card.js)
+[![Coverage](https://codeclimate.com/github/coffeedriven/card.js/badges/coverage.svg)](https://codeclimate.com/github/coffeedriven/card.js)
 
 # card.js
 card.js - parse and validate credit card number in javascript.
