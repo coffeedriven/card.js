@@ -51,15 +51,17 @@ card('4111111111111111').isValid(); // output: true
   
 ## Supported card types:
  
- - Visa
- - Mastercard
- - American Express (Amex)
- - Maestro
- - Diners Club
- - Discover
- - JCB
- - UATP
- - InterPayment
- - InstaPayment
- - China UnionPay
- - Dankort
+Issuing network | card type returned by `getType`
+--- | ---
+Visa | visa
+Mastercard | mastercard
+American Express | amex
+Maestro | meastro
+Diners Club | diners
+Discover | discover
+JCB | jcb
+UATP | uatp
+InterPayment | interpayment
+InstaPayment | instapayment
+China UnionPay | unionpay
+Dankort | dankort
