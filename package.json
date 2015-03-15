@@ -6,14 +6,10 @@
   "author": "Maciej Dzikowicki <mdzikowicki@gmail.com> (http://coffeedriven.org/)",
   "keywords": [
     "card",
-    "date",
-    "time",
-    "parse",
-    "format",
+    "luhn",
+    "validation",
     "validate",
-    "i18n",
-    "l10n",
-    "ender"
+    "creditcard"
   ],
   "main": "./src/card.js",
   "engines": {

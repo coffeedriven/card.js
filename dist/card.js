@@ -43,22 +43,21 @@
     Card.prototype.isValid = function() {
       return luhnChk(this._cardNumber);
     };
-    Card.prototype.getType = function() {
+
+    var checkType = function(cardNumber, regexType) {
       var cardType = null;
-      var cardNumber = this._cardNumber;
       card.CARD_TYPES.some(function(type) {
-        return type.numberRegex.test(cardNumber) ? (cardType = type, true) : false;
+        return type[regexType].test(cardNumber) ? (cardType = type, true) : false;
       });
       return !!cardType ? cardType.type : undefined;
     };
 
+    Card.prototype.getType = function() {
+      return checkType(this._cardNumber, 'numberRegex');
+    };
+
     Card.prototype.getIINType = function() {
-      var cardType = null;
-      var cardNumber = this._cardNumber;
-      card.CARD_TYPES.some(function(type) {
-        return type.iinNumberRegex.test(cardNumber) ? (cardType = type, true) : false;
-      });
-      return !!cardType ? cardType.type : undefined;
+      return checkType(this._cardNumber, 'iinNumberRegex');
     };
 
     /**
