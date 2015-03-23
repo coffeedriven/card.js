@@ -31,13 +31,13 @@ The library is also available from the [npm](https://npmjs.org/) registry, so
 
     $ npm install card.js
 
-will install this directory in a *node_modules* directory within the current directory.  
+will install this module in a *node_modules* directory within the current directory.  
 
 ## Usage
 
 ```
 card('4111111111111111').getType(); // output: visa
-card('41').getType(); // output: visa
+card('41').getIINType(); // output: visa
 card('4111111111111111').isValid(); // output: true
 ```
 
