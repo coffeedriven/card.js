@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Card.js : card.js - parse and validate credit card number in javascript.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Card.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/coffeedriven/card.js">View on GitHub</a>
+
+          <h1 id="project_title">Card.js</h1>
+          <h2 id="project_tagline">card.js - parse and validate credit card number in javascript.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/coffeedriven/card.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/coffeedriven/card.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><a href="https://travis-ci.org/coffeedriven/card.js"><img src="https://travis-ci.org/coffeedriven/card.js.png" alt="Build Status"></a>
+<a href="https://codeclimate.com/github/coffeedriven/card.js"><img src="https://codeclimate.com/github/coffeedriven/card.js/badges/coverage.svg" alt="Code Coverage"></a>
+<a href="https://codeclimate.com/github/coffeedriven/card.js"><img src="https://codeclimate.com/github/coffeedriven/card.js/badges/gpa.svg" alt="Code Climate"></a></p>
+
+<h1>
+<a id="cardjs" class="anchor" href="#cardjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>card.js</h1>
+
+<p>card.js - parse and validate credit card number in javascript.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Credit card type detection based on IIN number. See more on <a href="http://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29">wikipedia</a>
+</li>
+<li>Credit card type detection for full length card number</li>
+<li>Luhn algorithm validation</li>
+</ul>
+
+<h2>
+<a id="loading" class="anchor" href="#loading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading</h2>
+
+<p>The library is the single JavaScript file <em>card.js</em> (or minified, <em>card.min.js</em>).   </p>
+
+<p>It can be loaded via a script tag in an HTML document for the browser</p>
+
+<pre><code>&lt;script src='./relative/path/to/card.js'&gt;&lt;/script&gt;
+</code></pre>
+
+<p>(check <a href="examples/browser">examples/browser</a>) or as a CommonJS, <a href="http://nodejs.org">Node.js</a>.</p>
+
+<p>For Node, put the <em>card.js</em> file into the same directory as the file that is requiring it and use</p>
+
+<pre><code>var card = require('./card.js'); 
+</code></pre>
+
+<p>or put it in a <em>node_modules</em> directory within the directory and use <code>require('card.js')</code>. See example in <a href="examples/nodejs">examples/nodejs</a>.</p>
+
+<p>The library is also available from the <a href="https://npmjs.org/">npm</a> registry, so</p>
+
+<pre><code>$ npm install card.js
+</code></pre>
+
+<p>will install this module in a <em>node_modules</em> directory within the current directory.  </p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>card('4111111111111111').getType(); // output: visa
+card('41').getIINType(); // output: visa
+card('4111111111111111').isValid(); // output: true
+</code></pre>
+
+<h2>
+<a id="supported-browsers" class="anchor" href="#supported-browsers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported browsers</h2>
+
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>Internet Explorer 9</li>
+<li>Safari</li>
+<li>Opera</li>
+</ul>
+
+<h2>
+<a id="supported-card-types" class="anchor" href="#supported-card-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported card types:</h2>
+
+<table>
+<thead>
+<tr>
+<th>Issuing network</th>
+<th>card type returned by <code>getType</code>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visa</td>
+<td>visa</td>
+</tr>
+<tr>
+<td>Mastercard</td>
+<td>mastercard</td>
+</tr>
+<tr>
+<td>American Express</td>
+<td>amex</td>
+</tr>
+<tr>
+<td>Maestro</td>
+<td>meastro</td>
+</tr>
+<tr>
+<td>Diners Club</td>
+<td>diners</td>
+</tr>
+<tr>
+<td>Discover</td>
+<td>discover</td>
+</tr>
+<tr>
+<td>JCB</td>
+<td>jcb</td>
+</tr>
+<tr>
+<td>UATP</td>
+<td>uatp</td>
+</tr>
+<tr>
+<td>InterPayment</td>
+<td>interpayment</td>
+</tr>
+<tr>
+<td>InstaPayment</td>
+<td>instapayment</td>
+</tr>
+<tr>
+<td>China UnionPay</td>
+<td>unionpay</td>
+</tr>
+<tr>
+<td>Dankort</td>
+<td>dankort</td>
+</tr>
+</tbody>
+</table>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Card.js maintained by <a href="https://github.com/coffeedriven">coffeedriven</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-35213958-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
